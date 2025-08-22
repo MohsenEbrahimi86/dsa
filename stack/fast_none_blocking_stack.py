@@ -1,6 +1,5 @@
 import threading
 from typing import Optional, TypeVar, Generic
-from queue import LifoQueue
 import time
 
 T = TypeVar('T')
@@ -35,7 +34,7 @@ class FastNonBlockingStack(Generic[T]):
             True if successful, False if stack is full (when maxsize > 0)
         """
         with self._lock:
-            if self._maxsize > 0 and len(self._items) >= self._maxsize:
+            if 0 < self._maxsize <= len(self._items):
                 return False
 
             self._items.append(item)
@@ -94,7 +93,7 @@ class FastNonBlockingStack(Generic[T]):
     def full(self) -> bool:
         """Check if the stack is full."""
         with self._lock:
-            return self._maxsize > 0 and len(self._items) >= self._maxsize
+            return 0 < self._maxsize <= len(self._items)
 
     def size(self) -> int:
         """Get the current size of the stack."""
