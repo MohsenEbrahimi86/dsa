@@ -1,13 +1,13 @@
 We can implement a thread-safe non-blocking stack using Python's atomic operations at the interpreter level and the queue module.
 
 - Here's a high-performance implementation:
-  [FastNoneBlockingStack](https://github.com/MohsenEbrahimi86/dsa/blob/main/stack/fast_none_blocking_stack.py)
+  [FastNoneBlockingStack](https://github.com/MohsenEbrahimi86/dsa/blob/main/src/stack/fast_none_blocking_stack.py)
 
 - For even better performance, here's a version that uses queue.LifoQueue (which is implemented in C and highly optimized):
-  [OptimizedNoneBlockingStack](https://github.com/MohsenEbrahimi86/dsa/blob/main/stack/optimized_none_blocking_stack.py)
+  [OptimizedNoneBlockingStack](https://github.com/MohsenEbrahimi86/dsa/blob/main/src/stack/optimized_none_blocking_stack.py)
 
 - Here's a high-performance version that minimizes locking for the common case:
-  [MinimalLockStack](https://github.com/MohsenEbrahimi86/dsa/blob/main/stack/minimal_lock_stack.py)
+  [MinimalLockStack](https://github.com/MohsenEbrahimi86/dsa/blob/main/src/stack/minimal_lock_stack.py)
 
 Run performance test:
 
