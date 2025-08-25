@@ -36,8 +36,7 @@ class TestBST:
         bst = BST()
         values = [50, 30, 70, 20, 40, 60, 80]
 
-        for val in values:
-            bst.insert(val)
+        bst.insert(values)
 
         # Inorder should give sorted order
         assert bst.inorder() == sorted(values)
