@@ -2,7 +2,7 @@
 
 A splay tree is a self-adjusting binary search tree with the additional property that recently accessed elements are quick to access again. It performs basic operations such as insertion, lookup, and removal in O(log n) amortized time.
 
-- [SplayTree](https://github.com/MohsenEbrahimi86/dsa/tree/main/src/tree/splay_tree)
+- [SplayTree](https://github.com/MohsenEbrahimi86/dsa/blob/main/src/tree/splay_tree.py)
 
 ## Key Features of this Splay Tree Implementation:
 
